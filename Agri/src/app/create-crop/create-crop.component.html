@@ -1,0 +1,51 @@
+<!-- Create Crop Form -->
+<div class="img">
+  <div class="crop">
+    <h1>Add Crop Form</h1>
+    <div class="addcrop">
+      <form [formGroup]="cropForm" (ngSubmit)="submitForm()" #myForm="ngForm">
+        <!-- Crop Type Field -->
+        <div class="mb-3">
+          <label for="cropType" class="form-label"><b>Crop Type</b></label>
+          <input type="text" formControlName="cropType" id="cropType" class="form-control" placeholder="Enter Crop Type" required>
+        </div>
+
+        <!-- Crop Name Field -->
+        <div class="mb-3">
+          <label for="cropName" class="form-label"><b>Crop Name</b></label>
+          <input type="text" formControlName="cropName" id="cropName" class="form-control" placeholder="Enter Crop Name" required>
+        </div>
+
+        <!-- Crop Quantity Field -->
+        <div class="mb-3">
+          <label for="quantity" class="form-label"><b>Quantity</b></label>
+          <input type="number" formControlName="quantity" id="quantity" class="form-control" placeholder="Enter Crop Quantity" min="1" required>
+        </div>
+
+        <!-- Price Field -->
+        <div class="mb-3">
+          <label for="price" class="form-label"><b>Price</b></label>
+          <input type="number" formControlName="price" id="price" class="form-control" placeholder="Enter Price" min="1" required>
+        </div>
+
+        <!-- Location Field -->
+        <div class="mb-3">
+          <label for="location" class="form-label"><b>Location</b></label>
+          <input type="text" formControlName="location" id="location" class="form-control" placeholder="Enter Location" required>
+        </div>
+
+        <!-- Image URL Field -->
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label"><b>Image URL</b></label>
+          <input type="text" formControlName="imageUrl" id="imageUrl" class="form-control" placeholder="Enter Image URL" required>
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!cropForm.valid">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" (click)="reload()">Cancel</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-secondary" routerLink="/farmer">Go Back</button>
+      </form>
+    </div>
+  </div>
+</div>

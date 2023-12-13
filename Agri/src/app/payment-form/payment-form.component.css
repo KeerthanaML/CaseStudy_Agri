@@ -1,0 +1,70 @@
+body {
+    /* Assuming the background image is in the /assets/images/ directory */
+    background-image: url('/assets/images/payment3.jpg');
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Makes sure the image doesn't repeat */
+    height: 100vh; /* Ensures the body takes up the full height of the viewport */
+}
+
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+ 
+.container:hover {
+    opacity: 0.7; /* Adjust the opacity value for the hover effect */
+}
+ 
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+ 
+.form-group {
+    margin-bottom: 15px;
+}
+ 
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+ 
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+ 
+.alert {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+ 
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+ 
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}

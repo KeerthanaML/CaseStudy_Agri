@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add the Material Design Icons CDN link here -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+
+    <!-- Other head elements -->
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4 padding-1" *ngFor="let order of orders">
+        <mat-card class="order-card">
+          <mat-card-content>
+            <h3>Order ID: {{ order.orderId }}</h3>
+            <p><strong>Crop ID:</strong> {{ order.cropId }}</p>
+            <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+            <p><strong>Total Amount:</strong> {{ order.totalAmount }}</p>
+          </mat-card-content>
+          <mat-card-actions class="btn-container">
+            <button mat-icon-button (click)="deleteOrder(order.orderId)">
+              <i class="fas fa-trash" style="color: red;"></i>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  
+    <div *ngIf="orders.length === 0" class="row">
+      <div class="col-md-12">
+        <mat-card class="order-card">
+          <mat-card-content class="text-center">
+            No orders available.
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

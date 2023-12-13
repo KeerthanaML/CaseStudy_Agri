@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="form-group">
+      <label for="filter">Filter</label>
+      <!-- Adding #searchInput to directly access this input element -->
+      <input #searchInput type="text" class="form-control" (keyup)="applyFilter(searchInput.value)" placeholder="Search for farmers">
+    </div>
+
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th>Farmer Id</th>
+          <th>Farmer Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let farmer of filteredFarmers">
+          <td>{{ farmer.id }}</td>
+          <td>{{ farmer.name }}</td>
+          <td>{{ farmer.email }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="editFarmer(farmer.id)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteFarmer(farmer.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot *ngIf="filteredFarmers.length === 0">
+        <tr>
+          <td class="text-center" colspan="4">No data matching the filter</td>
+        </tr>
+      </tfoot>
+    </table>
+</div>

@@ -1,0 +1,47 @@
+<!-- <div class="bg">   -->
+  <div id="sky">
+    <h1>WELCOME</h1>
+  <div class="Login">
+    <h1>Sign in</h1>
+   
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="uEmail" class="form-label"><b>Email:</b></label>
+        <input type="email" formControlName="uEmail" id="uEmail" class="form-control" placeholder="Enter Email" />
+        <div *ngIf="loginForm.controls['uEmail'].invalid && loginForm.controls['uEmail'].touched" class="error-message">
+          Please Enter a valid email
+        </div>
+      </div>
+ 
+      <div class="mb-3" style="position: relative;">
+        <label for="uPassword" class="form-label"><b>Password:</b></label>
+        <input type="password" formControlName="uPassword" class="form-control" id="uPassword" placeholder="Enter Password" />
+        <div *ngIf="loginForm.controls['uPassword'].invalid && loginForm.controls['uPassword'].touched" class="error-message">
+          Required
+        </div>
+      </div>
+ 
+      <!-- ...other form elements... -->
+<div class="mb-3">
+  <label for="uRole" class="form-label"><b>Role:</b></label>
+  <select formControlName="uRole" id="uRole" class="form-control">
+    <option value="Farmer">Farmer</option>
+    <option value="Dealer">Dealer</option>
+  </select>
+</div>
+<!-- ...other form elements... -->
+ 
+      <div>
+        <button type="submit" class="btn btn-success">Login</button>
+        <!-- Assuming you might need a cancel or go back button like in your previous form -->
+        <button type="button" class="btn btn-danger cancel" (click)="goBack()">Cancel</button>
+      </div>
+    </form>
+   
+    <!-- Assuming you might want a registration prompt like in your previous form -->
+    <p>
+      New User? <a routerLink="/register">Click here</a> to sign up.
+    </p>
+  </div>
+  <img src="/assets/images/linegrass.png" style="height: 199px;width:100%;background-attachment: fixed;"/>
+</div>

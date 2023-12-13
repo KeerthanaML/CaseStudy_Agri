@@ -1,0 +1,47 @@
+<body>
+<div class="container" >
+    <h1>Payment Form</h1>
+    <form (ngSubmit)="processPayment()" #paymentForm="ngForm">
+        <div class="form-group">
+            <label for="cardName">Card Name:</label>
+            <input
+                type="text"
+                id="cardName"
+                name="cardName"
+                [(ngModel)]="payment.cardName"
+                class="form-control"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="cardNo">Card Number:</label>
+            <input
+                type="text"
+                id="cardNo"
+                name="cardNo"
+                [(ngModel)]="payment.cardNo"
+                class="form-control"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input
+                type="number"
+                id="amount"
+                name="amount"
+                [(ngModel)]="payment.amount"
+                class="form-control"
+                required
+            />
+        </div>
+        <button type="submit" class="btn btn-primary">Process Payment</button>
+    </form>
+    <div *ngIf="isSuccess" class="alert alert-success mt-3">
+        Payment {{ payment.status }}!
+    </div>
+    <div *ngIf="!isSuccess" class="alert alert-danger mt-3">
+        <!-- Payment {{ payment.status }}. Please try again. -->
+    </div>
+</div>
+</body>

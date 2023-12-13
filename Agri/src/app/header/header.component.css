@@ -1,0 +1,22 @@
+.app-header nav {
+    background-color:black;
+    display: flex;
+    justify-content: space-between; /* Positions items on both ends of the container */
+    align-items: center; /* Aligns items vertically in the center */
+    width: 100%; /* Ensures the nav takes the full width of its parent */
+    padding: 10px 20px; /* Provides some spacing around */
+    overflow: hidden;
+}
+
+.app-header nav a:not(:first-child) {
+    margin-left: 20px; /* Spacing between navigation links */
+}
+
+.app-header nav a {
+    color: hsla(0, 0%, 99%, 0.95);
+    text-decoration: none;  /* This removes the default underline of anchor links */
+}
+
+/* If you want to change the color on hover */
+
+

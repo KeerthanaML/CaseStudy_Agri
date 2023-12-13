@@ -1,0 +1,11 @@
+<div *ngIf="order">
+    <h3>Order Details for Crop: {{ order.cropId }}</h3>
+    <p><strong>Order ID:</strong> {{ order.orderId }}</p>
+    <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+    <p><strong>Total Amount:</strong> {{ order.totalAmount }}</p>
+
+    <button mat-button color="primary" (click)="saveOrder()">Order</button> <!-- Use mat-button and color attribute -->
+    <!-- <button mat-button color="accent" (click)="payForOrder()">Pay</button> -->
+</div>
+
+

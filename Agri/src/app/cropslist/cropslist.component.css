@@ -1,0 +1,129 @@
+/* Ensure full-width for mat-form-field */
+/* .full-width {
+    width: 100%;
+} */
+
+.container {
+    margin-top: 20px;
+   
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.img-preview {
+    max-width: 200px; /* Adjust the max-width as needed */
+    max-height: 200px; /* Adjust the max-height as needed */
+}
+
+.example-card {
+    /* Set a fixed height for Mat Cards */
+    height: 400px; /* Adjust this value according to your design */
+    /* Add any other styles you need for uniform appearance */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling for mat-card */
+.example-card {
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* Ensure mat-card takes up full width of its parent column */
+mat-card {
+    width: 100%;
+   
+}
+
+
+mat-card-header {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+mat-card-title {
+    font-size: 1.2rem;
+}
+
+mat-card-subtitle {
+    font-size: 1rem;
+    margin: 0;
+}
+
+mat-card-content p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    background-color: antiquewhite;
+}
+
+mat-card-content  {
+  
+    background-color: antiquewhite;
+}
+
+
+/* Ensure buttons don't overflow and have appropriate space */
+.btn-container {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 40px; /* Space between the buttons */
+    flex-wrap: wrap; /* Allow the buttons to wrap to the next line if space is limited */
+    background-color: #f5f5f5; 
+}
+
+mat-icon-button {
+    margin: 0;
+    padding: 0px 6px; /* Adjusting padding might help fit them better */
+}
+
+mat-icon {
+    font-size: 20px;
+    vertical-align: middle; /* Align icon to the middle */
+}
+.padding-1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.example-card{
+    padding: 0px;
+    padding-bottom: 10px;
+    background-color:rgb(244, 243, 241)
+}
+.icon {
+    font-size: 100px;
+}
+button[mat-icon-button]:not([color="warn"]) {
+    color: #007bff; /* Blue color */
+}
+
+/* Delete button color */
+button[mat-icon-button][color="warn"] {
+    color: #dc3545; /* Red color */
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* This ensures items are packed to the start of the row */
+    margin-left: -1%; /* Adjust based on the margin value used on the card */
+    margin-right: -1%;
+}
+
+.col-md-4 {
+    flex: 0 0 calc(33.33% - 2%); /* Deduct the total margins (left and right) from width */
+    margin: 1%; /* 1% margin on both left and right */
+    box-sizing: border-box; /* Consider border and padding in the total width */
+}
+
+ 
+

@@ -1,0 +1,83 @@
+
+
+.Login {
+  max-width: 500px;
+  margin: 5% auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Hide any content that overflows */
+  white-space: nowrap;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+}
+/* 
+body {
+  overflow-x: hidden;
+} */
+
+/* h1{
+  text-align: center;
+  color: rgb(35, 35, 36);
+} */
+
+p{
+  color: rgb(146, 192, 232);
+}  
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+
+.btn-success {
+  background-color: #3e6830;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #9e4750;
+  color: #fff;
+}
+
+
+/* Style for the main container */
+/* .bg {
+    background-color: #f2f2f2;
+    padding: 20px;
+  } */
+ 
+ 
+
+  /* Style for the form heading */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+ 
+  /* Style for input fields and labels */
+  .form-label b {
+    font-weight: bold;
+  }
+ 
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+ 
+#sky {
+  height: 500px;
+  background-color: #cccccc;
+  background-image: linear-gradient(rgb(85, 149, 202), rgba(255, 255, 255, 0.993));
+}
+
+
+
+

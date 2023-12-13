@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add the Font Awesome CDN link here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <!-- Other head elements -->
+</head>
+<body>
+    <div class="container">
+        <!-- Add the style attribute to set the background color directly -->
+        <button mat-button (click)="logout()" class="flexbox-left-button">Logout</button>
+
+        <div class="row">
+            <div class="col-md-4 padding-1" *ngFor="let crop of crops">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>{{ crop.cropName }}</mat-card-title>
+                        <mat-card-subtitle>Crop Type: {{ crop.cropType }}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="img-container">
+                            <img [src]="crop.imageUrl" alt="Crop Image" class="img-preview">
+                        </div>
+                        <div class="crop-details">
+                            <p><strong>Crop ID:</strong> {{ crop.cropId }}</p>
+                            <p><strong>Quantity:</strong> {{ crop.quantity }}</p>
+                            <p><strong>Price:</strong> {{ crop.price }}</p>
+                            <p><strong>Location:</strong> {{ crop.location }}</p>
+                        </div>
+                        <!-- Other content goes here -->
+                    </mat-card-content>
+                    <mat-card-actions class="btn-container">
+                        <button mat-icon-button (click)="editCrop(crop)">
+                            <i class="fas fa-edit"></i> <!-- Edit icon using Font Awesome -->
+                        </button>
+                        <button mat-icon-button (click)="deleteCrop(crop.cropId)">
+                            <i class="fas fa-trash" style="color: red;"></i> <!-- Delete icon using Font Awesome -->
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

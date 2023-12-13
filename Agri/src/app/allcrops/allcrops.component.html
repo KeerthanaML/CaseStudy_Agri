@@ -1,0 +1,57 @@
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="filter">Filter</label>
+              <input type="text" class="form-control" (keyup)="applyFilter($event)" id="filter" placeholder="Search for crops">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Crop ID</th>
+              <th>Farmer ID</th>
+             <th>Crop Type</th>
+              <th>Crop Name</th>
+              <th>Quantity</th>
+              <th> price</th>
+              <th>Location</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let crop of crops">
+              <td>{{ crop.cropId }}</td>
+              <td>{{ crop.farmerId }}</td>
+              <td>{{ crop.cropType }}</td>
+              <td>{{ crop.cropName }}</td>
+             
+              <td>{{ crop.quantity }}</td>
+              <td>{{crop.price}}</td>
+              <td>{{crop.location}}</td>
+             
+              <!-- <td class="btn-container">
+               
+                <button mat-icon-button class="btn btn-danger" (click)="deleteCrop(crop.cropId)">Delete</button>
+              </td> -->
+              
+            </tr>
+          </tbody>
+          <tfoot *ngIf="crops.length === 0">
+            <tr>
+              <td class="text-center" colspan="6">No data matching the filter</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </body>
+      
+    
+
+

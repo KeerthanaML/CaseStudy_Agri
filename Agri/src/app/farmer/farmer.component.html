@@ -1,0 +1,24 @@
+<div class="navbar">
+    <a href="#">Dashboard</a>
+    <div class="dropdown">
+    
+    <button class="dropbtn">Profile</button>
+            <div class="dropdown-content">
+                <a href="/farmerlist"><i class="fa-solid fa-pen-to-square"></i>Farmer List</a>
+                <a href="/allcrops"><i class="fa-solid fa-bag-shopping"></i>All Crops</a>
+                <a href="/Home"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            </div>
+    </div>
+    </div>
+ 
+    <div class="sidebar">
+    <a routerLink="/create-crop"><i class="fa-solid fa-plant-wilt"></i>Add Crops</a>
+    <a routerLink="/crop-list"><i class="fa-solid fa-clipboard-list"></i>CropList</a>
+    <a routerLink="/order-list"><i class="fa-solid fa-bag-shopping"></i>Orders</a>
+    </div>
+    <div class="main">
+    <h1>Welcome</h1>
+    <h2>{{farmerName}}</h2>
+    <!-- For Image, use Angular's asset path -->
+    <!-- <img src="assets/images/farmer1.jpg"> -->
+    </div>

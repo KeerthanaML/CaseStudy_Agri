@@ -1,0 +1,72 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Edit Crop</h2>
+  
+    <div class="card shadow">
+      <div class="card-body">
+        <form [formGroup]="cropForm" (ngSubmit)="submitForm()" #myForm="ngForm">
+  
+          <!-- Crop Type Field -->
+          <div class="form-group">
+            <label for="cropType"><b>Crop Type</b></label>
+            <input type="text" formControlName="cropType" id="cropType" class="form-control" placeholder="Enter Crop Type" required>
+            <div *ngIf="cropForm.controls['cropType'].invalid && (cropForm.controls['cropType'].dirty || cropForm.controls['cropType'].touched)" class="text-danger">
+              Crop Type is required.
+            </div>
+          </div>
+  
+          <!-- Crop Name Field -->
+          <div class="form-group">
+            <label for="cropName"><b>Crop Name</b></label>
+            <input type="text" formControlName="cropName" id="cropName" class="form-control" placeholder="Enter Crop Name" required>
+            <div *ngIf="cropForm.controls['cropName'].invalid && (cropForm.controls['cropName'].dirty || cropForm.controls['cropName'].touched)" class="text-danger">
+              Crop Name is required.
+            </div>
+          </div>
+  
+          <!-- Crop Quantity Field -->
+          <div class="form-group">
+            <label for="quantity"><b>Quantity</b></label>
+            <input type="number" formControlName="quantity" id="quantity" class="form-control" placeholder="Enter Crop Quantity" min="1" required>
+            <div *ngIf="cropForm.controls['quantity'].invalid && (cropForm.controls['quantity'].dirty || cropForm.controls['quantity'].touched)" class="text-danger">
+              Quantity is required and must be greater than 0.
+            </div>
+          </div>
+  
+          <!-- Price Field -->
+          <div class="form-group">
+            <label for="price"><b>Price</b></label>
+            <input type="number" formControlName="price" id="price" class="form-control" placeholder="Enter Price" min="1" required>
+            <div *ngIf="cropForm.controls['price'].invalid && (cropForm.controls['price'].dirty || cropForm.controls['price'].touched)" class="text-danger">
+              Price is required and must be greater than 0.
+            </div>
+          </div>
+  
+          <!-- Location Field -->
+          <div class="form-group">
+            <label for="location"><b>Location</b></label>
+            <input type="text" formControlName="location" id="location" class="form-control" placeholder="Enter Location" required>
+            <div *ngIf="cropForm.controls['location'].invalid && (cropForm.controls['location'].dirty || cropForm.controls['location'].touched)" class="text-danger">
+              Location is required.
+            </div>
+          </div>
+
+            <!-- Image URL Field -->
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label"><b>Image URL</b></label>
+          <input type="text" formControlName="imageUrl" id="imageUrl" class="form-control" placeholder="Enter Image URL" required>
+        </div>
+  
+          <!-- Buttons -->
+          <div class="form-group d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary" [disabled]="!cropForm.valid">Update</button>
+            <div>
+              <button type="button" class="btn btn-danger mr-2" (click)="reload()">Cancel</button>
+              <button type="button" class="btn btn-secondary" routerLink="/crop-list">Go Back</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+  
